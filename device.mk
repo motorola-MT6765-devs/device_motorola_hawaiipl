@@ -44,6 +44,21 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.0-impl
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
+    libtinycompress \
+    libtinyxml \
+    tinymix
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \

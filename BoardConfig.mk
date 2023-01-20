@@ -10,6 +10,7 @@ DEVICE_PATH := device/motorola/hawaiip
 
 # A/B
 AB_OTA_UPDATER := true
+BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_PARTITIONS += \
     system \
     vendor \
@@ -17,7 +18,6 @@ AB_OTA_PARTITIONS += \
     boot \
     vbmeta_vendor \
     vbmeta_system
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64

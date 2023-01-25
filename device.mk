@@ -151,10 +151,12 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     factory_init.connectivity.common.rc \
     meta_init.rc \
-    init.recovery.mt6765.rc \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6765:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6765
+
+PRODUCT_PACKAGES += \
+    init.recovery.mt6765.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31

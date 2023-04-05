@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),hawaiip)
+ifeq ($(TARGET_DEVICE),hawaiipl)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

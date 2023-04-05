@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_hawaiip.mk
+    $(LOCAL_DIR)/arrow_hawaiipl.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_hawaiip-user \
-    lineage_hawaiip-userdebug \
-    lineage_hawaiip-eng
+    arrow_hawaiipl-user \
+    arrow_hawaiipl-userdebug \
+    arrow_hawaiipl-eng

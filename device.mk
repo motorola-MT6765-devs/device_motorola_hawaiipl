@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/motorola/hawaiipl/hawaiipl-vendor.mk)
 
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service \
@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
+#DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
@@ -180,9 +180,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # WiFi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/motorola/hawaiip/hawaiip-vendor.mk)
+    android.hardware.wifi@1.0-service-lazy \
+    android.hardware.wifi.supplicant-service \
+    hostapd \
+    wpa_supplicant

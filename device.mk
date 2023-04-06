@@ -134,27 +134,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.mt6765 \
-    multi_init.rc \
-    init.connectivity.common.rc \
-    meta_init.modem.rc \
-    init.aee.rc \
-    init.ago.rc \
-    init.sensor_1_0.rc \
     init.modem.rc \
-    meta_init.vendor.rc \
-    factory_init.connectivity.rc \
     init.mt6765.rc \
     init.mt6765.usb.rc \
-    meta_init.project.rc \
-    meta_init.connectivity.rc \
-    init.cgroup.rc \
     factory_init.rc \
-    init.connectivity.rc \
-    factory_init.project.rc \
+    ueventd.rc \
     init.project.rc \
-    meta_init.connectivity.common.rc \
-    init_connectivity.rc \
-    factory_init.connectivity.common.rc \
     meta_init.rc \
 
 PRODUCT_COPY_FILES += \
